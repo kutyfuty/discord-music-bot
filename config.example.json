@@ -1,0 +1,8 @@
+{
+    "_note": "Copy to config.json. Secrets (DISCORD_TOKEN, Spotify keys) go to .env, never here.",
+    "prefix": "!",
+    "_owner_id": "Your Discord user ID (owner commands such as !ytdlpguncelle). Optional.",
+    "owner_id": "",
+    "_music_instances": "Optional: IDs of the bot accounts running this code, in priority order, to play in several voice channels of one server at once. Leave empty for a single bot.",
+    "music_instances": []
+}
