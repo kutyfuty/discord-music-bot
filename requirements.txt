@@ -1,0 +1,11 @@
+# Python >= 3.11
+discord.py[voice]>=2.7.1,<3
+# DAVE (end-to-end voice encryption): required by discord.py 2.7+ to join voice
+davey>=0.1.6
+audioop-lts>=0.2.1; python_version >= "3.13"
+# [default] → yt-dlp-ejs (YouTube JS solver). The bot updates yt-dlp weekly by itself.
+yt-dlp[default]>=2026.8.19
+aiohttp>=3.9.0
+python-dotenv>=1.0.0
+spotipy>=2.23.0
+certifi

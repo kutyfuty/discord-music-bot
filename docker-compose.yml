@@ -1,0 +1,20 @@
+# docker compose up -d            → one bot
+# docker compose --profile two up -d → two bots (second voice channel), token of the second bot in .env.2
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./config.json:/app/config.json:ro
+  bot2:
+    build: .
+    profiles: ["two"]
+    restart: unless-stopped
+    environment:
+      BOT_INSTANCE: "2"
+    env_file: [.env, .env.2]
+    volumes:
+      - ./data:/app/data
+      - ./config.json:/app/config.json:ro
